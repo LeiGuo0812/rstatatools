@@ -5,6 +5,11 @@ rstatatools
 ===========
 
 <!-- badges: start -->
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![R build
+status](https://github.com/r-stata/rstatatools/workflows/R-CMD-check/badge.svg)](https://github.com/r-stata/rstatatools/actions)
 <!-- badges: end -->
 
 欢迎使用
