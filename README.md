@@ -32,6 +32,20 @@ R 包的开发不能使用中文，但是 readme
 使用介绍
 --------
 
+### Get and Visualize Stock Data
+
+GitHub：[Get and Visualize Stock
+Data](https://r-stata.github.io/rstatatools/articles/cntrade.html)
+Gitee: [Get and Visualize Stock
+Data](https://r-stata.github.io/rstatatools/articles/cntrade.html)
+
+### Some leaflet tiles
+
+GitHub: [Some leaflet
+tiles](https://r-stata.github.io/rstatatools/articles/leaflet_tiles.html)
+Gitee: [Some leaflet
+tiles](https://r-stata.github.io/rstatatools/articles/leaflet_tiles.html)
+
 ------------------------------------------------------------------------
 
 <h4 align="center">

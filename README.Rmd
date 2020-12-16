@@ -42,6 +42,16 @@ devtools::install_git('https://gitee.com/tidyfriday/rstatatools.git')
 
 ## 使用介绍
 
+### Get and Visualize Stock Data
+
+GitHub：[Get and Visualize Stock Data](https://r-stata.github.io/rstatatools/articles/cntrade.html)
+Gitee: [Get and Visualize Stock Data](https://r-stata.github.io/rstatatools/articles/cntrade.html)
+
+### Some leaflet tiles
+
+GitHub: [Some leaflet tiles](https://r-stata.github.io/rstatatools/articles/leaflet_tiles.html)
+Gitee: [Some leaflet tiles](https://r-stata.github.io/rstatatools/articles/leaflet_tiles.html)
+
 ------------
 
 <h4 align="center">License</h4>
