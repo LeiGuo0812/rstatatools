@@ -1,0 +1,8 @@
+pandoc: 2.10.1
+pkgdown: 1.6.1
+pkgdown_sha: ~
+articles:
+  cntrade: cntrade.html
+  leaflet_tiles: leaflet_tiles.html
+last_built: 2020-12-16T10:52Z
+

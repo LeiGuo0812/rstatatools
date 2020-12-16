@@ -1,0 +1,38 @@
+# # 加载包
+# pacman::p_load(ggplot2, dplyr, hrbrthemes)
+# print("已加载 ggplot2、dplyr 和 hrbrthemes!")
+#
+# # 为了以后方便以后调用这些字体，我把我喜欢用的一些字体存储成一些简单的单词。
+# enfont = "CascadiaCode-Regular"
+# cnfont = "SourceHanSerifSC-Medium"
+#
+# # 设定 ggplot2 绘图主题
+# theme_set(theme_ipsum(base_family = cnfont))
+# print("已 ggplot2 绘图主题为 theme_tq()!")
+#
+# # 这是设定 R 的基础绘图系统的绘图主题
+# library(basetheme)
+# pars <- basetheme("default")
+# pars$palette <- c("#2A363B", "#019875", "#99B898", "#FECEA8", "#FF847C", "#E84A5F", "#C0392B", "#96281B")
+# pars$bg  <- "white"
+# pars$fg  <- "gray20"
+# pars$col <- "gray20"
+# pars$col.main <- "black"
+# pars$col.axis <- "gray20"
+# pars$col.lab  <- "gray20"
+# pars$family   <-  cnfont
+# pars$lab      <-  c(10,10,7)
+# pars$cex.axis <-  0.8
+# pars$las      <-  0
+# pars$rect.border <- "black"
+# pars$rect.lwd    <- 4
+# basetheme(pars)
+#
+# # 取消科学计数法的显示
+# options(scipen = 200)
+#
+# # 设定 ggplot2 的默认调色板
+# options(
+#   ggplot2.continuous.colour = "viridis",
+#   ggplot2.continuous.fill = "viridis"
+# )

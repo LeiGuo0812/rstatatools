@@ -1,0 +1,185 @@
+usethis::create_download_url()
+?highcharter::highchart()
+?leafletCN::amap()
+iris %>%
+select_if(is.numeric)
+iris %>%
+select_if(is.numeric) %>%
+mutate_all(function(x) x - mean(x))
+download.file("https://mdniceczx.oss-cn-beijing.aliyuncs.com/cntrade.R")
+download.file("https://mdniceczx.oss-cn-beijing.aliyuncs.com/cntrade.R", "cntrade.R")
+?tidyquant::tq_get()
+##'   000001 The Shanghai Composite Index.
+##'   000300 CSI 300 Index.
+##'   399001 Shenzhen Component Index.
+##' The leading zeros in each code can be omitted.
+##' @param type Specify that the code is a stock code or index code, 'stock' is the default choice.
+##' @param ... Other paramter pass to the addTiles. function
+##'
+##' @example cntrade(1, type = "index")
+##'
+##' @export
+cntrade <- function(ticker = "",
+type = "stock") {
+ticker = as.character(ticker)
+stopifnot(type %in% c("stock", "index"))
+address = "http://quotes.money.163.com/service/chddata.html"
+if(type == "index") {
+field = "TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;TURNOVER;VOTURNOVER;VATURNOVER;TCAP;MCAP"
+}
+if(type == "stock") {
+field = "TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;VOTURNOVER;VATURNOVER"
+}
+start = "19900101"
+end = str_remove_all(as.character(Sys.Date()), "-")
+stopifnot(str_length(ticker) <= 6)
+while (str_length(ticker) < 6) {
+ticker = paste0("0", ticker)
+}
+if(type == "stock") {
+if(as.numeric(ticker) >= 600000) {
+url = paste0(address, "?code=0", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+if(as.numeric(ticker) < 600000) {
+url = paste0(address, "?code=1", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+}
+if(type == "index") {
+if(as.numeric(ticker) <= 1000) {
+url = paste0(address, "?code=0", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+if(as.numeric(ticker) > 1000) {
+url = paste0(address, "?code=1", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+}
+suppressWarnings({
+readLines(url) %>%
+iconv("GBK", "UTF-8") %>%
+read_csv() %>%
+mutate(股票代码 = str_remove(股票代码, "'")) -> df
+})
+stopifnot(nrow(df) != 0)
+return(df)
+}
+cntrade(1, type = "index")
+library(tidyverse)
+##'   000001 The Shanghai Composite Index.
+##'   000300 CSI 300 Index.
+##'   399001 Shenzhen Component Index.
+##' The leading zeros in each code can be omitted.
+##' @param type Specify that the code is a stock code or index code, 'stock' is the default choice.
+##' @param ... Other paramter pass to the addTiles. function
+##'
+##' @example cntrade(1, type = "index")
+##'
+##' @export
+cntrade <- function(ticker = "",
+type = "stock") {
+ticker = as.character(ticker)
+stopifnot(type %in% c("stock", "index"))
+address = "http://quotes.money.163.com/service/chddata.html"
+if(type == "index") {
+field = "TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;TURNOVER;VOTURNOVER;VATURNOVER;TCAP;MCAP"
+}
+if(type == "stock") {
+field = "TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;VOTURNOVER;VATURNOVER"
+}
+start = "19900101"
+end = str_remove_all(as.character(Sys.Date()), "-")
+stopifnot(str_length(ticker) <= 6)
+while (str_length(ticker) < 6) {
+ticker = paste0("0", ticker)
+}
+if(type == "stock") {
+if(as.numeric(ticker) >= 600000) {
+url = paste0(address, "?code=0", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+if(as.numeric(ticker) < 600000) {
+url = paste0(address, "?code=1", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+}
+if(type == "index") {
+if(as.numeric(ticker) <= 1000) {
+url = paste0(address, "?code=0", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+if(as.numeric(ticker) > 1000) {
+url = paste0(address, "?code=1", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+}
+suppressWarnings({
+readLines(url) %>%
+iconv("GBK", "UTF-8") %>%
+read_csv() %>%
+mutate(股票代码 = str_remove(股票代码, "'")) -> df
+})
+stopifnot(nrow(df) != 0)
+return(df)
+}
+cntrade(1, type = "index")
+length(traded_market_value)
+length(c("date", "code", "name", "close", "high", "low", "open", "yesterday close", "change amount", "change percent", "turnover", "transaction", "volume", "total market capitalisation", "traded market value"))
+##'   000001 The Shanghai Composite Index.
+##'   000300 CSI 300 Index.
+##'   399001 Shenzhen Component Index.
+##' The leading zeros in each code can be omitted.
+##' @param type Specify that the code is a stock code or index code, 'stock' is the default choice.
+##' @param ... Other paramter pass to the addTiles. function
+##'
+##' @example cntrade(1, type = "index")
+##'
+##' @export
+cntrade <- function(ticker = "",
+type = "stock") {
+ticker = as.character(ticker)
+stopifnot(type %in% c("stock", "index"))
+address = "http://quotes.money.163.com/service/chddata.html"
+if(type == "index") {
+field = "TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;TURNOVER;VOTURNOVER;VATURNOVER;TCAP;MCAP"
+}
+if(type == "stock") {
+field = "TCLOSE;HIGH;LOW;TOPEN;LCLOSE;CHG;PCHG;VOTURNOVER;VATURNOVER"
+}
+start = "19900101"
+end = str_remove_all(as.character(Sys.Date()), "-")
+stopifnot(str_length(ticker) <= 6)
+while (str_length(ticker) < 6) {
+ticker = paste0("0", ticker)
+}
+if(type == "stock") {
+if(as.numeric(ticker) >= 600000) {
+url = paste0(address, "?code=0", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+if(as.numeric(ticker) < 600000) {
+url = paste0(address, "?code=1", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+}
+if(type == "index") {
+if(as.numeric(ticker) <= 1000) {
+url = paste0(address, "?code=0", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+if(as.numeric(ticker) > 1000) {
+url = paste0(address, "?code=1", ticker,
+"&start=", start, "&end=", "&fields=", field)
+}
+}
+suppressWarnings({
+readLines(url) %>%
+iconv("GBK", "UTF-8") %>%
+read_csv() %>%
+set_names(c("date", "code", "name", "close", "high", "low", "open", "yesterday close", "change amount", "change percent", "turnover", "transaction", "volume", "total market capitalisation", "traded market value")) %>%
+mutate(name = str_remove(name, "'")) -> df
+})
+stopifnot(nrow(df) != 0)
+return(df)
+}

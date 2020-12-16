@@ -1,0 +1,50 @@
+library(rstatatools)
+cntrade(1)
+devtools::document()
+library(rstatatools)
+cntrade(1)
+devtools::load_all()
+cntrade(1)
+`%>%`
+`%>%`()
+usethis::use_cc0_license(name = "RStata")
+cntrade(1)
+highcharter::datetime_to_timestamp
+library(rstatatools)
+devtools::load_all(".")
+devtools::document()
+devtools::document()
+library(rstatatools)
+library(rstatatools)
+devtools::document()
+devtools::document()
+library(rstatatools)
+cntrade()
+cntrade(1)
+leaflet() %>% tdtmap(type = "terrain")
+devtools::document()
+usethis::use_package("leaflet")
+#' @param ... Other paramter pass to the addTiles. function
+#'
+#' @examples
+#' library(leaflet)
+#' library(rstatatools)
+#' if(interactive()){
+#'   leaflet() %>% tdtmap(type = "terrain")
+#' }
+#'
+#' @export
+tdtmap <- function (map, type = "normal",
+...) {
+stopifnot(type %in% c("normal", "satellite", "terrain"))
+key = "93724b915d1898d946ca7dc7b765dda5"
+url = paste0("http://t1.tianditu.com/DataServer?T=vec_w&X={x}&Y={y}&L={z}&tk=", key)
+if (type == "satellite") {
+url = paste0("http://t1.tianditu.com/DataServer?T=img_w&X={x}&Y={y}&L={z}&tk=", key)
+}
+if (type == "terrain") {
+url = paste0("http://t1.tianditu.com/DataServer?T=ter_w&X={x}&Y={y}&L={z}&tk=", key)
+}
+leaflet::addTiles(map, url,
+leaflet::tileOptions(tileSize = 256, minZoom = 3, maxZoom = 17, zoomOffset = 1), ...)
+}

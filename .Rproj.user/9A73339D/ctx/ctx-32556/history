@@ -1,0 +1,22 @@
+library(rstatatools)
+devtools::document()
+devtools::document()
+library(rstatatools)
+iris
+iris %>%
+as_tibble()
+library(tidyverse)
+iris %>%
+as_tibble()
+iris %>%
+as_tibble() %>%
+select("Sepal.Length")
+iris %>%
+as_tibble() %>%
+mutate("Sepal.Length" = "Sepal.Length")
+devtools::document()
+devtools::document()
+usethis::use_package("readr")
+devtools::document()
+library(rstatatools)
+rstatatools::cntrade(1)

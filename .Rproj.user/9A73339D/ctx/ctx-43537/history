@@ -1,0 +1,57 @@
+library(rstatatools)
+rstatatools::cntrade(1)
+rstatatools::cntrade(1, type = "index")
+rstatatools::cntrade(2, type = "index")
+rstatatools::cntrade(2, type = "index") %>%
+View
+library(tidyverse)
+View
+rstatatools::cntrade(2, type = "index") %>%
+View
+rstatatools::cntrade(3, type = "index")
+rstatatools::cntrade(5, type = "index")
+rstatatools::plotstock(1, "stock")
+?rstatatools::gdmap()
+leaflet() %>% gdmap()
+library(leaflet)
+library(rstatatools)
+if(interactive()){
+leaflet() %>% gdmap()
+}
+leaflet() %>% gdmap()
+read_rds('/Users/czxa/Desktop/文件/工企分省市县/gq2013_sample.rds')
+read_rds('/Users/czxa/Desktop/文件/工企分省市县/gq2013_sample.rds')
+library(sf)
+read_rds('/Users/czxa/Desktop/文件/工企分省市县/gq2013_sample.rds')
+read_rds('/Users/czxa/Desktop/文件/工企分省市县/2008~2013年工企数据库地理位置与区县分布.rds') %>%
+select(code = 组织机构代码) %>%
+slice(1:10000) -> locsf
+read_rds('/Users/czxa/Desktop/文件/工企分省市县/2008~2013年工企数据库地理位置与区县分布.rds') %>%
+dplyr::filter(年份 == 2013) %>%
+select(code = 组织机构代码) %>%
+slice(1:10000) -> locsf
+locsf
+read_rds('/Users/czxa/Desktop/文件/工企分省市县/2008~2013年工企数据库地理位置与区县分布.rds') %>%
+dplyr::filter(年份 == 2013) %>%
+st_as_sf(coords = c("经度", "纬度"), crs = 4326) %>%
+select(code = 组织机构代码) %>%
+slice(1:10000) -> locsf
+locsf
+leaflet() %>%
+tdtmap() %>%
+leafem::addFeatures(locsf)
+leaflet() %>%
+tdtmap() %>%
+leafem::addFeatures(locsf, weight = 0.01, radius = 0.01)
+leaflet() %>%
+tdtmap() %>%
+leafem::addFeatures(locsf, weight = 0.1, radius = 0.1)
+read_rds('/Users/czxa/Desktop/文件/工企分省市县/2008~2013年工企数据库地理位置与区县分布.rds') %>%
+dplyr::filter(年份 == 2013) %>%
+st_as_sf(coords = c("经度", "纬度"), crs = 4326) %>%
+select(code = 组织机构代码) %>%
+slice_sample(n = 10000) -> locsf
+leaflet() %>%
+tdtmap() %>%
+leafem::addFeatures(locsf, weight = 0.1, radius = 0.1)
+usethis::use_data(locsf)

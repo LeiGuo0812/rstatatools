@@ -1,0 +1,4 @@
+library(rstatatools)
+devtools::document()
+library(rstatatools)
+rstatatools::cntrade(1)
