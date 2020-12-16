@@ -42,14 +42,14 @@ R 包的开发不能使用中文，但是 readme
 GitHub：[Get and Visualize Stock
 Data](https://r-stata.github.io/rstatatools/articles/cntrade.html)
 Gitee: [Get and Visualize Stock
-Data](https://r-stata.github.io/rstatatools/articles/cntrade.html)
+Data](https://tidyfriday.gitee.io/rstatatools/articles/cntrade.html)
 
 ### Some leaflet tiles
 
 GitHub: [Some leaflet
 tiles](https://r-stata.github.io/rstatatools/articles/leaflet_tiles.html)
 Gitee: [Some leaflet
-tiles](https://r-stata.github.io/rstatatools/articles/leaflet_tiles.html)
+tiles](https://tidyfriday.gitee.io/rstatatools/articles/leaflet_tiles.html)
 
 ------------------------------------------------------------------------
 
