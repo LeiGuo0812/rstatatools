@@ -8,12 +8,10 @@ rstatatools
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![R build
-status](https://github.com/r-stata/rstatatools/workflows/R-CMD-check/badge.svg)](https://github.com/r-stata/rstatatools/actions)
 <!-- badges: end -->
 
 欢迎使用
-rstatatools，这个包里的函数并没有统一的目标，而是我平常使用的各种函数的几何，由于
+rstatatools，这个包里的函数并没有统一的目标，而是我平常使用的各种函数的集合，由于
 R 包的开发不能使用中文，但是 readme
 还是可以用的，所以我就用中文来介绍下这个 R 包。
 
